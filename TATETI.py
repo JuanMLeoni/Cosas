@@ -22,95 +22,68 @@ siete = 7
 ocho = 8
 nueve = 9
 
+b = {1:uno,2:dos,3:tres,4:cuatro,5:cinco,6:seis,7:siete,8:ocho,9:nueve}
+
 
 print("***** ***** *****\n"
-      f"* {siete} * * {ocho} * * {nueve} *\n"
+      f"* {b[7]} * * {b[8]} * * {b[9]} *\n"
       "***** ***** *****\n"
       "***** ***** *****\n"
-      f"* {cuatro} * * {cinco} * * {seis} *\n"
+      f"* {b[4]} * * {b[5]} * * {b[6]} *\n"
       "***** ***** *****\n"
       "***** ***** *****\n"
-      f"* {uno} * * {dos} * * {tres} *\n"
+      f"* {b[1]} * * {b[2]} * * {b[3]} *\n"
       "***** ***** *****\n")
 
 
 for k in range(1,5):
         X = int(input("Equipo X: "))
+        for i in b:
+             if X == b[i]:
+                  b[i] = "X"
+                  print("***** ***** *****\n"
+                    f"* {b[7]} * * {b[8]} * * {b[9]} *\n"
+                    "***** ***** *****\n"
+                    "***** ***** *****\n"
+                    f"* {b[4]} * * {b[5]} * * {b[6]} *\n"
+                    "***** ***** *****\n"
+                    "***** ***** *****\n"
+                    f"* {b[1]} * * {b[2]} * * {b[3]} *\n"
+                    "***** ***** *****\n")
 
-        if X == 1:
-                uno = "X"
-        if X == 2:
-                dos = "X"
-        if X == 3:
-                tres = "X"
-        if X == 4:
-                cuatro = "X"
-        if X == 5:
-                cinco = "X"
-        if X == 6:
-                seis = "X"
-        if X == 7:
-                siete = "X"
-        if X == 8:
-                ocho = "X"
-        if X == 9:
-                nueve = "X"
-
-
-        print("***** ***** *****\n"
-        f"* {siete} * * {ocho} * * {nueve} *\n"
-        "***** ***** *****\n"
-        "***** ***** *****\n"
-        f"* {cuatro} * * {cinco} * * {seis} *\n"
-        "***** ***** *****\n"
-        "***** ***** *****\n"
-        f"* {uno} * * {dos} * * {tres} *\n"
-        "***** ***** *****\n")
-
-        if( uno == "X" and dos == "X" and tres == "X" or
-            cuatro == "X" and cinco == "X" and seis == "X" or
-            siete == "X" and ocho == "X" and nueve == "X" or
-            uno == "X" and cinco == "X" and nueve =="X" or
-            tres == "X" and cinco == "X" and siete =="X"):
+        if( b[1] == "X" and b[2] == "X" and b[3] == "X" or
+            b[4] == "X" and b[5] == "X" and b[6] == "X" or
+            b[7] == "X" and b[8] == "X" and b[9] == "X" or
+            b[1] == "X" and b[4] == "X" and b[7] == "X" or
+            b[2] == "X" and b[5] == "X" and b[8] == "X" or
+            b[3] == "X" and b[6] == "X" and b[9] == "X" or
+            b[1] == "X" and b[5] == "X" and b[9] == "X" or
+            b[3] == "X" and b[5] == "X" and b[7] == "X"):
             print("Equipo X ganó")
             break
 
         O = int(input("Equipo O: "))
+        for i in b:
+             if O == b[i]:
+                  b[i] = "O"
+                  print("***** ***** *****\n"
+                    f"* {b[7]} * * {b[8]} * * {b[9]} *\n"
+                    "***** ***** *****\n"
+                    "***** ***** *****\n"
+                    f"* {b[4]} * * {b[5]} * * {b[6]} *\n"
+                    "***** ***** *****\n"
+                    "***** ***** *****\n"
+                    f"* {b[1]} * * {b[2]} * * {b[3]} *\n"
+                    "***** ***** *****\n")
         
-        if O == 1:
-            uno = "O"
-        if O == 2:
-            dos = "O"
-        if O == 3:
-            tres = "O"
-        if O == 4:
-            cuatro = "O"
-        if O == 5:
-            cinco = "O"
-        if O == 6:
-            seis = "O"
-        if O == 7:
-            siete = "O"
-        if O == 8:
-            ocho = "O"
-        if O == 9:
-            nueve = "O"
-
-        print("***** ***** *****\n"
-        f"* {siete} * * {ocho} * * {nueve} *\n"
-        "***** ***** *****\n"
-        "***** ***** *****\n"
-        f"* {cuatro} * * {cinco} * * {seis} *\n"
-        "***** ***** *****\n"
-        "***** ***** *****\n"
-        f"* {uno} * * {dos} * * {tres} *\n"
-        "***** ***** *****\n")
-        
-        if( uno == "O" and dos == "O" and tres == "O" or
-            cuatro == "O" and cinco == "O" and seis == "O" or
-            siete == "O" and ocho == "O" and nueve == "O" or 
-            uno == "O" and cinco == "O" and nueve =="O" or 
-            tres == "O" and cinco == "O" and siete =="O"):
+        if( b[1] == "O" and b[2] == "O" and b[3] == "O" or
+            b[4] == "O" and b[5] == "O" and b[6] == "O" or
+            b[7] == "O" and b[8] == "O" and b[9] == "O" or
+            b[1] == "O" and b[4] == "O" and b[7] == "O" or
+            b[2] == "O" and b[5] == "O" and b[8] == "O" or
+            b[3] == "O" and b[6] == "O" and b[9] == "O" or
+            b[1] == "O" and b[5] == "O" and b[9] == "O" or
+            b[3] == "O" and b[5] == "O" and b[7] == "O"):
             print("Equipo O ganó")
             break
     
